@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0F652F61-231D-4401-AECD-BD574AA3A67E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fitness_Zone</RootNamespace>
+    <AssemblyName>Fitness_Zone</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Biz\Annual.cs" />
+    <Compile Include="Biz\Attendance.cs" />
+    <Compile Include="Biz\Equipment.cs" />
+    <Compile Include="Biz\LineProduct.cs" />
+    <Compile Include="Biz\member.cs" />
+    <Compile Include="Biz\MemPayments.cs" />
+    <Compile Include="Biz\Order.cs" />
+    <Compile Include="Biz\Paymentbalance.cs" />
+    <Compile Include="Biz\schedule.cs" />
+    <Compile Include="Biz\six_month.cs" />
+    <Compile Include="Biz\Trainer.cs" />
+    <Compile Include="Biz\User.cs" />
+    <Compile Include="Biz\ViewAnnual.cs" />
+    <Compile Include="Biz\Viewsix_month.cs" />
+    <Compile Include="DAL\DBEstablish.cs" />
+    <Compile Include="DAL\SystemDAL.cs" />
+    <Compile Include="GUI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Mainpage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Mainpage.Designer.cs">
+      <DependentUpon>Mainpage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Report_Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Report_Attendance.Designer.cs">
+      <DependentUpon>Report_Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Report_Equipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Report_Equipment.Designer.cs">
+      <DependentUpon>Report_Equipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Report_Member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Report_Member.Designer.cs">
+      <DependentUpon>Report_Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Report_Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Report_Payment.Designer.cs">
+      <DependentUpon>Report_Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Report_Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Report_Schedule.Designer.cs">
+      <DependentUpon>Report_Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Report_Trainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Report_Trainer.Designer.cs">
+      <DependentUpon>Report_Trainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Schedule.Designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Trainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Trainer.Designer.cs">
+      <DependentUpon>Trainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\user.Designer.cs">
+      <DependentUpon>user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GymDataSet.cs">
+      <DependentUpon>GymDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GymDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GymDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Mainpage.resx">
+      <DependentUpon>Mainpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Reports\Attendance.rdlc" />
+    <EmbeddedResource Include="GUI\Reports\Member_Details.rdlc" />
+    <EmbeddedResource Include="GUI\Reports\Report_Equipment.rdlc" />
+    <EmbeddedResource Include="GUI\Reports\Report_Payment.rdlc" />
+    <EmbeddedResource Include="GUI\Reports\Report_Schedule.rdlc" />
+    <EmbeddedResource Include="GUI\Reports\Report_Trainer.rdlc" />
+    <EmbeddedResource Include="GUI\Report_Attendance.resx">
+      <DependentUpon>Report_Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report_Equipment.resx">
+      <DependentUpon>Report_Equipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report_Member.resx">
+      <DependentUpon>Report_Member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report_Payment.resx">
+      <DependentUpon>Report_Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report_Schedule.resx">
+      <DependentUpon>Report_Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Report_Trainer.resx">
+      <DependentUpon>Report_Trainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Trainer.resx">
+      <DependentUpon>Trainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\user.resx">
+      <DependentUpon>user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="GymDataSet.xsc">
+      <DependentUpon>GymDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GymDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GymDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GymDataSet.xss">
+      <DependentUpon>GymDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
